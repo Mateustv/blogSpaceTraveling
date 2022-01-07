@@ -12,7 +12,7 @@ import { FiCalendar, FiClock, FiUser } from 'react-icons/fi';
 
 import { format } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
-import { useState } from 'react';
+import Comments from '../../components/comments';
 
 interface Post {
   first_publication_date: string | null;
@@ -82,7 +82,9 @@ export default function Post({ post }: PostProps) {
             })
           }
         </article>
+        <Comments />
       </main>
+
     </>
   )
 }
