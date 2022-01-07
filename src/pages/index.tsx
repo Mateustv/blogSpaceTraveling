@@ -7,7 +7,7 @@ import { getPrismicClient } from '../services/prismic';
 
 import commonStyles from '../styles/common.module.scss';
 import styles from './home.module.scss';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { ptBR } from 'date-fns/locale';
 import Link from 'next/link';
 
@@ -77,7 +77,7 @@ export default function Home({ postsPagination }: HomeProps) {
           {
             post.map(post => (
               <Link href={`/post/${post.uid}`} key={post.uid}>
-                <a>
+                <a className={styles.blogsPosts}>
                   <strong>{post.data.title}</strong>
                   <p>{post.data.subtitle}</p>
                   <ul>
