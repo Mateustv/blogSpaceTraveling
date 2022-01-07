@@ -1,15 +1,17 @@
 import { GetStaticProps } from 'next';
-import Prismic from '@prismicio/client'
-import { FiCalendar, FiUser } from "react-icons/fi";
-import { format } from 'date-fns'
+import Link from 'next/link';
+import { useState } from 'react';
 
+import Prismic from '@prismicio/client'
 import { getPrismicClient } from '../services/prismic';
+
+import { FiCalendar, FiUser } from "react-icons/fi";
+
+import { format } from 'date-fns'
+import { ptBR } from 'date-fns/locale';
 
 import commonStyles from '../styles/common.module.scss';
 import styles from './home.module.scss';
-import { useState } from 'react';
-import { ptBR } from 'date-fns/locale';
-import Link from 'next/link';
 
 interface Post {
   uid?: string;
