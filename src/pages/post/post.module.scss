@@ -39,3 +39,28 @@
   }
 
 }
+.nextPrevBtn{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 0.5px solid var(--gray-200);
+  
+  .next{
+    text-align: right;
+    justify-self: end
+  }
+  .prev{
+    justify-self: start;
+  }
+  div {
+    padding-top: 3rem;
+  }
+  h3{
+    font-weight: 400;
+    font-size:1.125rem;
+  }
+  a{
+    font-size:1rem;
+    font-weight: 600;
+    color: var(--pink-500)
+  }
+}
