@@ -19,6 +19,7 @@ interface Post {
   last_publication_date: string | null;
   data: {
     title: string;
+    subtitle: string;
     banner: {
       url: string;
     };
@@ -175,7 +176,7 @@ export const getStaticProps: GetStaticProps = async ({ preview = false, params, 
   const { slug } = params
 
   const prismic = getPrismicClient();
-  const response = await prismic.getByUID('post', String(slug), {
+  const response = await prismic.getByUID<any>('post', String(slug), {
     ref: previewData?.ref || null
   });
 
